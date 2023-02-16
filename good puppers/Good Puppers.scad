@@ -43,33 +43,24 @@ difference() {
         }
     
     //second cutout
-    translate([wall + (crdW/2) - (cutoutW/2) + crdW,0- _min,bottom])
+    translate([(2*wall) + (crdW/2) - (cutoutW/2) + crdW,0- _min,bottom])
         cube([cutoutW,wall + _min + _min,_max]);
 
     //rounded corners for second cutout
-    translate([radius + crdW, -0.01, crdH + bottom - radius])
+    translate([radius + crdW + wall, -0.01, crdH + bottom - radius])
         difference() {
             cube([radius + .01,wall + .02,radius + .01]);    
             rotate([270,0,0]) 
                 cylinder($fn=100, h=wall+1, r1=radius, r2=radius);
         }
 
-    translate([(crdW - cutoutW/2)-wall -.01 + crdW, -.01 , crdH + bottom - radius])
+    translate([(crdW - cutoutW/2) -.01 + crdW, -.01 , crdH + bottom - radius])
         difference() {
             cube([radius + .01,wall + .02,radius + .01]);
             translate([radius,0,0])
             rotate([270,0,0]) 
                 cylinder($fn=100, h=wall+1, r1=radius, r2=radius);
         }
-
-//logo
-//translate([98,crdL + (2*wall)-.05,3])
-//    rotate([90,0,180])
-//    scale([.3,.3])
-//    linear_extrude(3)
-//    import("e:/3d printing/good puppers/puppers.svg");
-
-
 }
 tb1X = 8;
 tb1Y = 75;
