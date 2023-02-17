@@ -1,0 +1,8 @@
+// rounded corner
+
+hull() {
+    cube([5,5,2]);
+    translate([35,35,0]) cylinder(r=15, h=2);
+    translate([45,0,0]) cube([5,5,2]);
+    translate([0,45,0]) cube([5,5,2]);
+}
