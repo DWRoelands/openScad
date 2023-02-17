@@ -8,12 +8,17 @@ crdH = 40;
 manualH = 3;
 
 cutoutW = 30;
+cutout2R = 12.5;
+
 
 difference() {
     cube([(wall*3) + (crdW*2), (wall*2) + crdL, crdH + bottom]);
     
     translate([wall,wall,bottom])
         cube([crdW,crdL,_max]);
+
+    translate([wall/2,((2*wall)+crdL)/2, bottom + crdH])
+        sphere(r=cutout2R, $fn=100);
 
     translate([(2*wall)+crdW,wall,bottom])
         cube([crdW,crdL,_max]);
