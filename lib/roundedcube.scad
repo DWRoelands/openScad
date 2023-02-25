@@ -1,3 +1,9 @@
+//
+// Dan Upshaw built this module and graciously shared it with the community.
+// The code itself can be found at https://danielupshaw.com/openscad-rounded-corners/
+// Dan's website is https://danielupshaw.com
+// His Thingiverse profile is here: https://www.thingiverse.com/dupsh/collections
+//
 // Higher definition curves
 $fs = 0.01;
 
