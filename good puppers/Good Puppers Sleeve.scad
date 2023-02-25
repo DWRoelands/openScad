@@ -22,8 +22,8 @@ echo(gapZ=gapZ);
 difference() {
     cube([sleeveX,sleeveY,sleeveZ],center=true);
     
-    translate([-10,0,0])
-        cube([trayX+padding,trayY+(2*padding),trayZ+(2*padding)],center=true);
+    translate([-2,0,0])
+        cube([trayX+padding+1,trayY+(2*padding),trayZ+(2*padding)],center=true);
     
     translate([-(sleeveX/2),0,-(sleeveZ/2)])
         cube([latchHookX,latchY + (2*latchGap),sleeveWall*3],center=true);
