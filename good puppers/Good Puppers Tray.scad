@@ -22,22 +22,21 @@ difference()
     // interior
     translate([wall,wall,bottom])
     cube([trayX-(2*wall),trayY-(2*wall),_max]);
-//
-//    //end pieces
+    
+    //end pieces
     translate([-_max,-_min,-_min])
     cube([_max,_max,_max]);
-//
-//    translate([trayX,-_min,-_min])
-//    cube([_max,_max,_max]);
-//
-//    // cutouts down to bottom
+    translate([trayX,-_min,-_min])
+    cube([_max,_max,_max]);
+
+    // cutouts down to bottom
     translate([cutoutRemainder+wall,0-_min,bottom])
     cube([cutoutWidth,_max,_max]);
 
     translate([(3*cutoutRemainder)+cutoutWidth+(2*wall),0-_min,bottom])
     cube([cutoutWidth,_max,_max]);
-//    
-//    // fingerholes in bottom
+    
+    // fingerholes in bottom
     translate([wall+cutoutRemainder+(cutoutWidth/2),0,0-_min])
     cylinder(h=bottom+(2*_min), r1=(cutoutWidth/2), r2=(cutoutWidth/2), $fn=facets);
 
@@ -54,25 +53,13 @@ difference()
     translate([0-_min,trayY/2,trayZ])
     rotate([0,90,0])
     cylinder(h=2*wall,r1=cutoutRadius,r2=cutoutRadius,$fn=facets);
-
-//    //logo on end
-//    translate([.2,78,1])
-//    rotate([90,0,270])
-//    scale([.3,.3,.3])
-//    linear_extrude(5)
-//    import("e:/00-git/openScad/Good Puppers/Puppers.svg");
-   
-   
-translate([0-_min,(trayY/2)-(latchY/2),0-_min])
-cube([latchX,latchY,latchZ]);
-   
 }
 
 // middle wall
 translate([wall+crdW,0,bottom])
 cube([wall,trayY,trayZ-manual-bottom]);
 
-//help text
+// player count text on tray bottom
 tb1X = 7;
 tb1Y = 71;
 tbLineY = 17;
