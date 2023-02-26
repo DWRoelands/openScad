@@ -1,6 +1,7 @@
 FloorThickness = 1;
 Padding = 1;
 ComponentHeight = 2;
+_min=.01;
 
 // Retailer physical dimensions
 RetailerWidth = 20;
@@ -34,19 +35,19 @@ difference() {
     
     // small retailer layer
     translate([RetailerWalls, RetailerWalls, FloorThickness])
-        cube([RetailerLengthSmall + RetailerLengthPadding, RetailerWidth + Padding, RetailerTrayHeight]);
+        cube([RetailerLengthSmall + RetailerLengthPadding, RetailerWidth + Padding + _min, RetailerTrayHeight]);
     
     // medium retailer layer
     translate([RetailerWalls, RetailerWalls, FloorThickness + (2 * ComponentHeight)])
-        cube([RetailerLengthMedium + RetailerLengthPadding, RetailerWidth + Padding, RetailerTrayHeight]);
+        cube([RetailerLengthMedium + RetailerLengthPadding, RetailerWidth + Padding + _min, RetailerTrayHeight]);
     
     // large retailer layer
     translate([RetailerWalls, RetailerWalls, FloorThickness + (5 * ComponentHeight)])
-        cube([RetailerLengthLarge + RetailerLengthPadding, RetailerWidth + Padding, RetailerTrayHeight]);
+        cube([RetailerLengthLarge + RetailerLengthPadding, RetailerWidth + Padding + _min, RetailerTrayHeight]);
     
     // finger cutout
-    translate([0, RetailerTrayCutoutRidgeWidth, FloorThickness])
-        cube([RetailerWalls, RetailerTrayWidth - (2 * RetailerTrayCutoutRidgeWidth), RetailerTrayHeight]);
+    translate([-_min, RetailerTrayCutoutRidgeWidth, FloorThickness])
+        cube([RetailerWalls+(2*_min), RetailerTrayWidth - (2 * RetailerTrayCutoutRidgeWidth), RetailerTrayHeight]);
 }
 union()
 
