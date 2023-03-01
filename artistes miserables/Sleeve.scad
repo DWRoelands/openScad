@@ -16,6 +16,9 @@ echo(gapX=gapX);
 echo(gapY=gapY);
 echo(gapZ=gapZ);
 
+
+
+
 difference() {
     // create the starting block of material
     cube([sleeveX,sleeveY,sleeveZ],center=true);
@@ -24,12 +27,28 @@ difference() {
     translate([-2,0,0])
         cube([trayX+padding+1,trayY+(2*padding),trayZ+(2*padding)],center=true);
 
-    // put the logo on the top and center it
-    rotate([0,0,logoOrientation])
-    translate([-(sleeveX/2)+6,-(sleeveY/2)+11,(sleeveZ/2)-.5])
-        scale([.7,.7,.7])
-        color("red")
-        linear_extrude(5)
-        import("e:/00-git/openScad/Good Puppers/Puppers.svg");
+rotate([0,0,90])
+translate([-(sleeveX/2)+24.5,5,(sleeveZ/2)-1])
+    scale([.4,.4,.4])
+    linear_extrude(5)
+    import("artistes miserables.svg");
+
+
+
 }
+
+translate([-45,-100,-14.5])
+rotate([90,-90,0])
+color("blue")
+scale([.65,.65,.65])
+text("Artistes", font="Times New Roman");
+
+translate([-36,-100,-19.5])
+rotate([90,-90,0])
+color("blue")
+scale([.65,.65,.65])
+text("Miserables", font="Times New Roman");
+
+
+
 
