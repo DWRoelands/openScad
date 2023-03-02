@@ -22,7 +22,7 @@ module roundedcube(size = [1, 1, 1], center = false, radius = 0.5, apply_to = "a
 			sphere(r = radius);
 		} else if (type == "cylinder") {
 			rotate(a = rotate)
-			cylinder(h = diameter, r = radius, center = true);
+			cylinder(h = diameter, r = radius, center = true, $fn=90);
 		}
 	}
 

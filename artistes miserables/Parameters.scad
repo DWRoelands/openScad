@@ -42,9 +42,10 @@ manual = 3;
 padding = 0.5;     
 
 // font
-fontName = "Arial Black";
-labelPadding = 6;
-labelDepth = .3;
+trayFontName = "Arial Black";
+trayLabelPadding = 6;
+trayLabelDepth = .3;
+
 
 // MAKING ADJUSTMENTS BELOW THIS POINT IS NOT ADVISED
 trayX = (wall*3)+(crdW*2);

@@ -48,17 +48,17 @@ difference()
     cylinder(h=bottom+(2*_min), r1=(cutoutWidth/2), r2=(cutoutWidth/2), $fn=facets);
 
     //label outer walls of token trays
-    translate([(2*wall)+crdW,(3*gap)+(3*wall)+labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW,(3*gap)+(3*wall)+trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,0])
     scale([.8,.8,.8])
     linear_extrude(5)
-    text("Poverty", font=fontName);
+    text("Poverty", font=trayFontName);
 
-    translate([(2*wall)+crdW + 67.5,wall-labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW + 67.5,wall-trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,180])
     scale([.8,.8,.8])
     linear_extrude(2)
-    text("Despair", font=fontName);
+    text("Despair", font=trayFontName);
 
 
 }
@@ -91,29 +91,29 @@ difference() {
     }
     
     // label inner walls of token trays
-    translate([(2*wall)+crdW,(gap+wall)+labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW,(gap+wall)+trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,0])
     scale([.8,.8,.8])
     linear_extrude(2)
-    text("Despair", font=fontName);
+    text("Despair", font=trayFontName);
 
-    translate([(2*wall)+crdW,(2*gap)+(2*wall)+labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW,(2*gap)+(2*wall)+trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,0])
     scale([.8,.8,.8])
     linear_extrude(2)
-    text("Infirmity", font=fontName);
+    text("Infirmity", font=trayFontName);
 
-    translate([(2*wall)+crdW + 67.5,(2*wall)+gap-labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW + 67.5,(2*wall)+gap-trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,180])
     scale([.8,.8,.8])
     linear_extrude(2)
-    text("Infirmity", font=fontName);
+    text("Infirmity", font=trayFontName);
 
-    translate([(2*wall)+crdW + 67.5,(3*wall)+(2*gap)-labelDepth,crdH-labelPadding])
+    translate([(2*wall)+crdW + 67.5,(3*wall)+(2*gap)-trayLabelDepth,crdH-trayLabelPadding])
     rotate([90,0,180])
     scale([.8,.8,.8])
     linear_extrude(2)
-    text("Poverty", font=fontName);
+    text("Poverty", font=trayFontName);
 
 
 

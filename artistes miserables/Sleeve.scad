@@ -16,8 +16,16 @@ echo(gapX=gapX);
 echo(gapY=gapY);
 echo(gapZ=gapZ);
 
-
-
+title = "Artistes Misérables";
+players = "3 to 6 players";
+playTime = "20 to 40 minutes";
+sleeveFontName = "Grifter:style=Bold";
+sleeveSpineTextDepth = .5;
+sleeveSpineTitleSize = 11;
+sleeveSpinePlayersSize = 7;
+sleeveSpineTimeSize = 7;
+sleeveSpineLineSpacing = 2;
+sleeveSpinePaddingLeft = 3;
 
 difference() {
     // create the starting block of material
@@ -27,27 +35,43 @@ difference() {
     translate([-2,0,0])
         cube([trayX+padding+1,trayY+(2*padding),trayZ+(2*padding)],center=true);
 
-rotate([0,0,90])
-translate([-(sleeveX/2)+24.5,5,(sleeveZ/2)-1])
-    scale([.4,.4,.4])
-    linear_extrude(5)
-    import("artistes miserables.svg");
+    // cover image
+    rotate([0,0,90])
+    translate([-(sleeveX/2)+24.5,5,(sleeveZ/2)-1])
+        scale([.4,.4,.4])
+        linear_extrude(5)
+        import("artistes miserables.svg");
+
+    // spine text
+    titleZ=(
+        (sleeveZ-
+        (sleeveSpineTitleSize+
+        sleeveSpineLineSpacing+
+        sleeveSpinePlayersSize+
+        sleeveSpineLineSpacing+
+        sleeveSpineTimeSize))/4);
+    translate([-(sleeveX/2)+sleeveSpinePaddingLeft,-(sleeveY/2)-sleeveWall + 2 + sleeveSpineTextDepth,titleZ])
+    rotate([90,0,0])
+    linear_extrude(2)
+    text(title, font=sleeveFontName, size=sleeveSpineTitleSize);
+
+    playersZ = titleZ - sleeveSpineLineSpacing - sleeveSpinePlayersSize;
+    translate([-(sleeveX/2)+sleeveSpinePaddingLeft,-(sleeveY/2)-sleeveWall + 2 + sleeveSpineTextDepth,playersZ])
+    rotate([90,0,0])
+    linear_extrude(2)
+    text(players, font=sleeveFontName, size=sleeveSpinePlayersSize);
+
+    playTimeZ = playersZ - sleeveSpineLineSpacing - sleeveSpineTimeSize;
+    translate([-(sleeveX/2)+sleeveSpinePaddingLeft,-(sleeveY/2)-sleeveWall + 2 + sleeveSpineTextDepth,playTimeZ])
+    rotate([90,0,0])
+    linear_extrude(2)
+    text(playTime, font=sleeveFontName, size=sleeveSpinePlayersSize);
 
 
 
 }
 
-translate([-45,-100,-14.5])
-rotate([90,-90,0])
-color("blue")
-scale([.65,.65,.65])
-text("Artistes", font="Times New Roman");
 
-translate([-36,-100,-19.5])
-rotate([90,-90,0])
-color("blue")
-scale([.65,.65,.65])
-text("Miserables", font="Times New Roman");
 
 
 
