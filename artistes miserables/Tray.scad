@@ -40,7 +40,7 @@ difference()
     translate([cutoutRemainder+wall,0-_min,bottom])
     cube([cutoutWidth,_max,_max]);
    
-    // fingerholes in bottom of card we
+    // fingerholes in bottom of card well
     translate([wall+cutoutRemainder+(cutoutWidth/2),0,0-_min])
     cylinder(h=bottom+(2*_min), r1=(cutoutWidth/2), r2=(cutoutWidth/2), $fn=facets);
 

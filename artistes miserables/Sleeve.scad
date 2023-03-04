@@ -24,7 +24,7 @@ sleeveSpineTextDepth = .5;
 sleeveSpineTitleSize = 11;
 sleeveSpinePlayersSize = 7;
 sleeveSpineTimeSize = 7;
-sleeveSpineLineSpacing = 2;
+sleeveSpineLineSpacing = 3;
 sleeveSpinePaddingLeft = 3;
 
 difference() {
