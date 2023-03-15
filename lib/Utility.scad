@@ -10,3 +10,14 @@ module halfcylinder(he,rd,fn) {
     } 
 } 
 
+// hexagon functions
+hexagon(height,edgeLength) {
+    cylinder(h=height, r1=edgeLength*2, r2=edgeLength*2, $fn=6);
+}
+
+function ld() = 2 * hexEdge;  // long diagonal
+function sd() = sqrt(3) * hexEdge;  // short diagonal
+// end hexagon functions
+
+
+

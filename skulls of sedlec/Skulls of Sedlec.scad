@@ -1,20 +1,28 @@
+//thickness of box sides
 wall = 2;
 
-crdX = 68;                  // width of card well, x axis
-crdY = 93;                  // length of card well, y axis
-crdZMain = 11;                  // height of card well, z axis
-crdZMonstrance = 5;
-crdZManual = 5;
+//width of cards, including sleeves and extra space
+crdX = 67;
 
+//length of cards including sleeves and extra space
+crdY = 93;                  // length of card well, y axis
+
+//height of the entire pile of cards.  modify if you have more cards
+crdZ = 18;
+
+//how much of the main box is tapered to accommodate the lid
 lidY = 25;
+
+//the size of the taper
 lidDiff = 0.75;
 
+//constant to avoid coincident faces.  don't change this
 _min=0.1;
 
-
-trayX = crdX+(2*wall);
-trayY = (crdY+(2*wall));
-trayZ = crdZMain + crdZMonstrance + crdZManual + 5 + (2*wall);
+//calculated values
+trayX = crdX+wall;
+trayY = crdY+(2*wall);
+trayZ = crdZ+(2*wall);
 
 difference() {
     cube([trayX,trayY,trayZ]);
@@ -28,23 +36,20 @@ difference() {
     translate([0-_min,0-_min,0-_min]) cube([trayX+_min,lidY,lidDiff]);
 
     rotate([0,0,180])
-    translate([-trayX+3.5,-60,trayZ+(2*wall)-4.5])
+    translate([-trayX+3.1,-60,trayZ+(2*wall)-4.5])
         scale([.13,.13,1])
         linear_extrude(2)
         import("skulls of sedlec.svg");    
 
-    translate([trayX-.5,lidY+4,2.5])
+    translate([trayX-.5,lidY+2,10])
     rotate([90,0,90])
-        scale([.13,.13,1])
-        linear_extrude(2)
-        import("skulls of sedlec.svg");    
-    
-    translate([0.5,trayY-4,2.5])
+    linear_extrude(2)
+    text("SKULLS OF SEDLEC", font="Impact", size=7);
+
+    translate([0.5,trayY-4,10])
     rotate([90,0,270])
-        scale([.13,.13,1])
-        linear_extrude(2)
-        import("skulls of sedlec.svg");    
-    
+    linear_extrude(2)
+    text("SKULLS OF SEDLEC", font="Impact", size=7);
 }
     
 
