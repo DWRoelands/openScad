@@ -3,7 +3,7 @@
 wall = 2;
 
 //width of cards, including sleeves and extra space
-crdX = 67;
+crdX = 70;
 
 //length of cards including sleeves and extra space
 crdY = 93;                  
@@ -21,7 +21,7 @@ lidDiff = 0.75;
 lidSpacing = 0.25;
 
 sideFontName="Impact";
-sideFontSize=7;
+sideFontSize=10;
 sideFontLeftPadding=2;
 
 //constant to avoid coincident faces.  don't change this
