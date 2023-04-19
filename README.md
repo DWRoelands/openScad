@@ -5,6 +5,9 @@ If there's something here that is helpful to you, that's great.  Take it and use
 
 Designs included:
 
-* Good Puppers
 * Artistes Miserables
+* Good Puppers
+* Innovation
+* Skulls of Sedlec
+* Vampire: The Masquerade - Vendetta
 
