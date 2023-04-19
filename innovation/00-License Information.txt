@@ -1,0 +1,1 @@
+The STL files and OpenSCAD code files are my own creations.  They are presented as-is, and at no cost.  All copyrights and trademarkes remain the property of their owners, and these projects do not assert ownership or licenses beyond Fair Use.
