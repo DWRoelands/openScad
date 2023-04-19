@@ -15,26 +15,28 @@ difference() {
     translate([trayX-.5,lidY+2,(trayZ/2)-(sideFontSize/2)-.5])
     rotate([90,0,90])
     linear_extrude(2)
-    text("VENTRUE", font=sideFontName, size=sideFontSize);
+    text("NOSFERATU", font=sideFontName, size=sideFontSize);
 
     //side text 2
     translate([0.5,trayY-3,(trayZ/2)-(sideFontSize/2)-.5])
     rotate([90,0,270])
     linear_extrude(2)
-    text("VENTRUE", font=sideFontName, size=sideFontSize);
+    text("NOSFERATU", font=sideFontName, size=sideFontSize);
     
     //finger notch
     translate([wall+(crdX/2),0,0])
     cylinder(h=crdZ+(2*wall),r1=crdX/4, r2=crdX/4,$fn=180);
 
     //symbol
-    translate([10,91,21.5])
-    rotate([0,0,270])
-    scale([.4,.4,.4])
-    linear_extrude(5)
-    import("logoVentrue.svg");
+    translate([56.5,91,21.5])
+    rotate([0,0,180])
+    scale([.825,.825,.825])
+    color("red")
+    linear_extrude(1)
+    import("logoNosferatu.svg");
+   
+    
 }
     
-
 
 
