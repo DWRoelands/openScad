@@ -31,3 +31,8 @@ _min=0.1;
 trayX = crdX+(2*wall);
 trayY = crdY+(2*wall);
 trayZ = crdZ+(2*wall);
+
+// values for card tray
+crdTrayZ = 23 + wall;
+trayNotch = 40;
+trayFontSize = 16;

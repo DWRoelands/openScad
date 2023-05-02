@@ -15,28 +15,25 @@ difference() {
     translate([trayX-.5,lidY+2,(trayZ/2)-(sideFontSize/2)-.5])
     rotate([90,0,90])
     linear_extrude(2)
-    text("TREMERE", font=sideFontName, size=sideFontSize);
+    text("BRUJAH", font=sideFontName, size=sideFontSize);
 
     //side text 2
     translate([0.5,trayY-3,(trayZ/2)-(sideFontSize/2)-.5])
     rotate([90,0,270])
     linear_extrude(2)
-    text("TREMERE", font=sideFontName, size=sideFontSize);
+    text("BRUJAH", font=sideFontName, size=sideFontSize);
     
     //finger notch
     translate([wall+(crdX/2),0,0])
     cylinder(h=crdZ+(2*wall),r1=crdX/4, r2=crdX/4,$fn=180);
 
     //symbol
-    translate([65,89,21.5])
+    translate([70,94,21.5])
     rotate([0,0,180])
-    scale([1,1,1])
+    scale([.3,.3,.3])
     color("red")
-    linear_extrude(1)
-    import("logoTremere.svg");
+    linear_extrude(2)
+    import("logoBrujah.svg");
    
     
 }
-    
-
-
