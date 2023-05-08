@@ -36,3 +36,41 @@ trayZ = crdZ+(2*wall);
 crdTrayZ = 23 + wall;
 trayNotch = 40;
 trayFontSize = 16;
+
+// non-card well
+wellX = 142;
+
+lvl1Z = 12;
+
+// places discs
+discR = 60;
+discPadding = 2;
+discHolder = 3;
+discBrim = 2;
+discNotch = 70;
+holderY = (2 * discR) + (2 * discHolder) + (2 * discPadding) + (2 * discBrim);
+
+//miscellaneous tray
+boxSize = 243;
+miscBottom = 1;
+miscX = wellX;
+miscY = boxSize - holderY;
+miscZ = lvl1Z;
+miscWall=1;
+
+//blood tokens tray
+// same basic size as the places disc holder
+btWall = 1;
+btBottom = 2;
+btWellDepth = 18;
+btZ = btBottom + btWellDepth;
+btWellX = (wellX - (5*btWall))/4;
+
+//blood tokens ks
+// same basic size as the miscellaneous tray
+btkWall = 1;
+btkBottom = 2;
+btkWellDepth = 18;
+btkZ = btkBottom + btkWellDepth;
+btkWellX = (wellX - (5*btWall))/4;
+
